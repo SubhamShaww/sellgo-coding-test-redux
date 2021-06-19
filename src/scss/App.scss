@@ -1,0 +1,81 @@
+@import "./mixin";
+@import "./var";
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.searchbar {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+
+    & input {
+        flex: 1;
+        height: 100%;
+        padding: 0 0 0 1rem;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    & .searchbar__icon {
+        color: #fff;
+        background-color: $search-button-background-color;
+        height: 100%;
+        width: 3rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        & {
+            width: 40%;
+        }
+    }
+}
+
+.searchresults {
+    display: grid;
+    width: 100%;
+    grid-row-gap: 1rem;
+
+    & .searchresults__title {
+        grid-template-columns: 43% 20% 23%;
+        @include commonBoxCode(gray, 500);
+
+        & p {
+            overflow-wrap: anywhere;
+        }
+    }
+
+    & .searchresults__body {
+        grid-template-columns: 43% 20% 23% min-content;
+        @include commonBoxCode(lightgray, 400);
+
+        & p {
+            overflow-wrap: anywhere;
+        }
+
+        & .trash {
+            height: 1.5rem;
+            visibility: hidden;
+            @media screen and (min-width: 530px) {
+                visibility: visible;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        & {
+            width: 50%;
+        }
+    }
+}
