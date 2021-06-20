@@ -10,28 +10,28 @@
 }
 
 .searchbar {
-    height: 2rem;
-    width: 100%;
     margin-bottom: 2rem;
-    display: flex;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 2rem;
     align-items: center;
-    border: 0.1rem solid gray;
-    border-radius: 0.5rem;
 
     & input {
-        flex: 1;
+        font-size: 0.9rem;
         height: 100%;
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 2rem;
         outline: none;
-        border: none;
+        border: 0.1rem solid gray;
         border-radius: 0.5rem 0 0 0.5rem;
     }
 
     & .searchbar__icon {
+        cursor: pointer;
         color: #fff;
         background-color: $search-button-background-color;
         height: 100%;
-        width: 3rem;
+        padding: 0.1rem;
         border-radius: 0 0.5rem 0.5rem 0;
     }
 
@@ -53,6 +53,18 @@
 
         & p {
             overflow-wrap: anywhere;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, min-content);
+            cursor: pointer;
+
+            & .sorticon {
+                height: 1.5rem;
+            }
+
+            @media screen and (min-width: 376px) {
+                overflow-wrap: break-word;
+            }
         }
     }
 
@@ -67,6 +79,7 @@
         & .trash {
             height: 1.5rem;
             visibility: hidden;
+            cursor: pointer;
             @media screen and (min-width: 530px) {
                 visibility: visible;
             }

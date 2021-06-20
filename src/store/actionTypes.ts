@@ -1,5 +1,3 @@
 export const SET_SEARCH_RESULTS = "SET_SEARCH_RESULTS";
 
 export const DELETE_RESULT = "DELETE_RESULT";
-
-export const SORT_RESULTS = "SORT_RESULTS";

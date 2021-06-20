@@ -21,14 +21,3 @@ export function deleteResult(movies: Movie[]) {
         dispatch(action);
     };
 }
-
-export function sortResultByCategory(category: string) {
-    const action: CategoryAction = {
-        type: actionTypes.SORT_RESULTS,
-        category,
-    };
-
-    return (dispatch: CategoryDispatchType) => {
-        dispatch(action);
-    };
-}

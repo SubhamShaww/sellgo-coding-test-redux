@@ -3,7 +3,7 @@
     padding: 0.5rem 1rem 0.5rem 2rem;
     display: grid;
     align-items: center;
-    justify-items: left;
+    justify-content: left;
     border: 0.1rem solid $border-color;
     border-radius: 0.5rem;
     grid-template-rows: repeat(auto-fit, minmax(3rem, 1fr));
