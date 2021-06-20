@@ -6,6 +6,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://docs.google.com/document/d/108ggDSA__S34wco5kLZ5ENaMqH1rhqEo2mHSAlLuIO4/?usp=sharing
 
+## Instruction for Use:
+
+1. Initially, you have to give movie name or subset of movie name to get movies containing the word searched with.
+
+2. For Desktop and laptop, delete icon provided for deleting the movie.
+
+3. For mobile devices, user has swipe left or right for deleting the movie touched.
+
+4. To Sort the results according to Title, Year or imdbId, you have to click or touch on that particular category.
+
 ## Available Scripts
 
 In the project directory, you can run:
